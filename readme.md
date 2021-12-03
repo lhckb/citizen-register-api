@@ -19,7 +19,7 @@ Now please mind for the JSON formatting on moving data:
     for the "/citizen/string:cpf" route:
     1. put method -
         {
-            "desired info to change" : "data"
+            "<desired info to change>" : "<data>"
         }
         on this put method you can alter email, cep, cellphone and surname.
 
