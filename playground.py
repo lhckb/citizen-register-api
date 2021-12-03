@@ -88,11 +88,14 @@ def queryByCPF():
     person = Citizens.query.filter_by(cpf = cpf2query).first()
     print(person)
 
-choice = ''
+def delete():
+    cpf2delete = input('CPF of person to be deleted (numbers only): ')
+    remove = requests.delete(f'http://127.0.0.1:5000/citizen/{cpf2delete}')
 
-while choice != '5':
+choice = ''
+while choice != '6':
     choice = input('''1- insert new citizen; 2- update info on citizen; 3- query all;
-    4- query specific; 5- exit: ''')
+    4- query specific; 5- delete specific; 6- exit: ''')
 
     if choice == '1':
         insertNew()
@@ -107,6 +110,9 @@ while choice != '5':
         queryByCPF()
 
     elif choice == '5':
+        delete()
+
+    elif choice == '6':
         print('program stopped')
 
     else:
