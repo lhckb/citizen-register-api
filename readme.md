@@ -15,7 +15,7 @@ How to use it:
 obs.: you can use playground.py to manipulate data directly from your terminal.
 
 Now please mind for the JSON formatting on moving data:
-    for the "/citizen/<string:cpf>" route:
+    for the "/citizen/string:cpf" route:
     1. put method -
         {
             "desired info to change" : "data"
