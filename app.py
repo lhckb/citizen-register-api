@@ -65,6 +65,22 @@ class Citizen(Resource):
 
         return jsonify(response)
 
+    def delete(self, cpf):
+        person = Citizens.query.filter_by(cpf = cpf).first()
+        try:
+            person.delete()
+
+            response = {
+                'success' : 'deleted successfully'
+            }
+        
+        except Exception as e:
+            response = {
+                'error' : f'{e}'
+            }
+
+        return jsonify(response)
+
 
 class NewCitizen(Resource):
     def post(self):
@@ -122,3 +138,5 @@ api.add_resource(AllCitizens, '/citizens/')
 
 if __name__ == '__main__':
     app.run(debug = True)
+
+# TODO add delete
