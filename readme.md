@@ -1,7 +1,5 @@
 # Citizen Register API
 
-### AS OF DECEMBER 3rd, 2021, I HAVE STARTED DEVELOPMENT OF THIS PROJECT THIS MORNING, WILL BE TESTING MORE AND DEBUGGING ON THE NEXT FEW DAYS
-
 This API was developed in Flask using Flask-Restful in Python 3.9.5 
 
 It can Create, Read, Update and Delete information.
